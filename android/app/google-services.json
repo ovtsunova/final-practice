@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "502661401494",
+    "project_id": "task-scheduler-68cd3",
+    "storage_bucket": "task-scheduler-68cd3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502661401494:android:594fb683209052991e2bb7",
+        "android_client_info": {
+          "package_name": "com.example.event_planner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOD_DzwzYgdG5dm1JtpMnP8br51Oi5C3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
