@@ -510,10 +510,13 @@ class _EventsPageState extends State<EventsPage> {
                                 children: [
                                   Row(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Checkbox(
                                         value: event.isCompleted,
+                                        visualDensity: VisualDensity.compact,
+                                        materialTapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
                                         onChanged: (_) {
                                           context.read<EventsBloc>().add(
                                                 EventToggleCompletedRequested(
@@ -522,7 +525,7 @@ class _EventsPageState extends State<EventsPage> {
                                               );
                                         },
                                       ),
-                                      const SizedBox(width: 4),
+                                      const SizedBox(width: 6),
                                       Expanded(
                                         child: AnimatedDefaultTextStyle(
                                           duration: const Duration(
@@ -597,8 +600,7 @@ class _EventsPageState extends State<EventsPage> {
                                   ],
                                   const SizedBox(height: 12),
                                   Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       IconButton(
                                         tooltip: 'Редактировать',
