@@ -90,6 +90,7 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
         location: event.location,
         category: event.category,
         eventDate: event.eventDate,
+        remindAt: event.remindAt,
       );
 
       await NotificationService.instance.scheduleForEvent(createdEvent);

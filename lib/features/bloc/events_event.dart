@@ -36,6 +36,7 @@ final class EventCreateRequested extends EventsEvent {
     required this.location,
     required this.category,
     required this.eventDate,
+    required this.remindAt,
   });
 
   final String title;
@@ -43,6 +44,7 @@ final class EventCreateRequested extends EventsEvent {
   final String location;
   final String category;
   final DateTime eventDate;
+  final DateTime remindAt;
 
   @override
   List<Object?> get props => [
@@ -51,6 +53,7 @@ final class EventCreateRequested extends EventsEvent {
         location,
         category,
         eventDate,
+        remindAt,
       ];
 }
 

@@ -18,6 +18,7 @@ class EventsRepository {
     required String location,
     required String category,
     required DateTime eventDate,
+    required DateTime remindAt,
   }) {
     return _firestoreSource.createEvent(
       title: title,
@@ -25,6 +26,7 @@ class EventsRepository {
       location: location,
       category: category,
       eventDate: eventDate,
+      remindAt: remindAt,
     );
   }
 

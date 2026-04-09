@@ -42,6 +42,7 @@ class FirestoreSource {
     required String location,
     required String category,
     required DateTime eventDate,
+    required DateTime remindAt,
   }) async {
     final now = DateTime.now();
     final doc = _eventsCollection.doc();
@@ -54,7 +55,7 @@ class FirestoreSource {
       location: location,
       category: category,
       eventDate: eventDate,
-      remindAt: eventDate,
+      remindAt: remindAt,
       createdAt: now,
       updatedAt: now,
       isCompleted: false,
@@ -69,7 +70,6 @@ class FirestoreSource {
     final updatedEvent = event.copyWith(
       updatedAt: DateTime.now(),
       notificationSent: false,
-      remindAt: event.eventDate,
     );
 
     await _eventsCollection.doc(event.id).update(updatedEvent.toMap());
